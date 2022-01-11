@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>​
+<MyProfile>
+    <name> Andreas Hartanto </name>
+    <school> Humber College </school>
+    <hobby> Watch movies and cooking </hobby>
+</MyProfile>
+
+##for groups of 10 people, just repeat the same grouping
+<MyProfile>
+    <name> Andreas Hartanto </name>
+    <school> Humber College </school>
+    <hobby> Watch movies and cooking </hobby></MyProfile>
+<MyProfile>
+    <name> Andreas2 </name>
+    <school> Humber College </school>
+    <hobby> Watch movies and cooking </hobby></MyProfile>
+<MyProfile>
+    <name> Andreas3 </name>
+    <school> Humber College </school>
+    <hobby> Watch movies and cooking </hobby></MyProfile>

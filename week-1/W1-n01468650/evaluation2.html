@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form name="myform" action="register.php" method="get">
+        <fieldset id="account-info">
+            <label class="label-account-info" for="email">Your Email*:</label>
+            <input class="input-account-info" type="text" name="email" id="email" size="40" autofocus><br>
+            <label class="label-account-info" for="date" >Date of Visit:</label>
+            <input class="input-account-info" type="text" name="date" id="date" size="40"><br>
+            <label class="label-account-info" for="comment">Your Comment:</label>
+            <br>
+            <textarea name="comments"></textarea><br>
+            <input type="submit" name="submit" id="button" value="Send your Feedback" onclick="return alert('Data has been submitted');">
+        </fieldset>
+        
+    </form>
 </body>
 </html>
