@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8"?> <!-- Prolog -->
+<?xml-stylesheet type="text/css" href="assignment.css"?>
+<!-- DTD-->
+<!DOCTYPE menuInfo 
+[
+  <!ELEMENT menuInfo (title, summary, effectiveDate?,menu+)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT summary (#PCDATA)>
+  <!ELEMENT effectiveDate (#PCDATA)>
+  <!ELEMENT menu (category, menuItem+)>
+  <!ELEMENT category (#PCDATA)>
+  <!ELEMENT menuItem (itemName, description, price, indicator*)>
+  <!ELEMENT itemName (originalName, oldName?)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  <!ELEMENT indicator (#PCDATA)>
+  <!ELEMENT originalName (#PCDATA)>
+  <!ELEMENT oldName (#PCDATA)>
+]>
+<!-- Document Body-->
 <menuInfo>
   <title>Chester's Breakfast Menu</title>
   <summary>
@@ -8,7 +27,7 @@
     up just the way you like them!!
     ]]>
   </summary>
-  <effective Date>03/12/2016</effective Date>
+  <effectiveDate>03/12/2016</effectiveDate>
   <menu>
     <category>Traditional Favorites</category>
     <menuItem>
@@ -80,3 +99,6 @@
     </menuItem>
   </menu>
 </menuInfo>
+<!-- epilog (optional)-->
+<!-- Name: Andreas Hartanto -->
+<!--Student ID: n01468650 -->

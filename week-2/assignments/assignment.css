@@ -1,0 +1,14 @@
+* {
+display: block;
+margin: 10px;
+}
+
+originalName {
+    font-size: larger;
+    font: bold;
+}
+
+category::after {
+    content: "\a";
+    white-space: pre;
+}
