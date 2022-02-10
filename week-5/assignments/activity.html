@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> </title>
+  </head>
+  <body>
+    <br onSubmit="return testResults(event)" action="" method="get">
+      <h1></h1>
+      </br></br>
+      Enter something in the box: <br />
+        <input type="text" name="inputText" value="" required />
+        </br></br>
+        <label>Radio 1<input type="radio" name="inputRadio" ></input></label></br>
+        <label>Radio 2<input type="radio" name="inputRadio" ></input></label></br>
+        <label>Radio 3<input type="radio" name="inputRadio" ></input></label>
+        </br></br>
+        <label>Checkbox 1<input type="checkbox" name="inputCheckbox" ></input></label></br>
+        <label>Checkbox 2<input type="checkbox" name="inputCheckbox" ></input></label></br>
+        <label>Checkbox 3<input type="checkbox" name="inputCheckbox" ></input></label>
+        </br></br>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      function testResults(event) {
+        event.preventDefault();
+        const form = event.target;
+
+        const inputText = form.inputText;
+        console.log(`Selected value: ${inputText.value}`);
+
+        const inputRadio = form.inputRadio;
+        console.log(`Radio value: ${inputRadio.value}`);
+
+        const inputCheckbox = form.inputCheckbox.forEach(element => {
+          if(element.checked) console.log(`Checkbox value: ${element.value}`);
+        })
+      }
+    </script>
+  </body>
+</html>

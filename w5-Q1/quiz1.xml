@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="quiz1.xsl"?>
+<products>
+    <product>
+        <id sku="1">a332d8d2-86d7-11ec-a8a3-0242ac120002</id>
+        <name>Microfleece hoodie</name>
+        <sizes>
+            <size>XS - 0 items</size>
+            <size>S - 3 items</size>
+            <size>M - 13 items</size>
+            <size>L - 5 items</size>
+            <size>XL - 2 items</size> 
+        </sizes>
+        <prices>
+            <price currency="USD">US$49.99</price>
+            <price currency="CAD">CAD$59.99</price>
+        </prices>
+    </product>
+    <product>
+        <id sku="2">a332dac6-86d7-11ec-a8a3-0242ac120002</id>
+        <name>Vintage Soft Hoodie</name>
+        <sizes>
+            <size>XS - 3 items</size>
+            <size>S - 8 items</size>
+            <size>M - 25 items</size>
+            <size>L - 12 items</size>
+            <size>XL - 4 items</size> 
+        </sizes>
+        <prices>
+            <price currency="USD">US$39.99</price>
+            <price currency="CAD">CAD$49.99</price>
+        </prices>
+    </product>
+    <product>
+        <id sku="3">a332dbf2-86d7-11ec-a8a3-0242ac120002</id>
+        <name>Crewneck Sweatshirt</name>
+        <sizes>
+            <size>XS - 0 items</size>
+            <size>S - 0 items</size>
+            <size>M - 15 items</size>
+            <size>L - 13 items</size>
+            <size>XL - 0 items</size> 
+        </sizes>
+        <prices>
+            <price currency="CAD">CAD$47.97</price>
+        </prices>
+    </product>
+    <product>
+        <id sku="4">a332dd0a-86d7-11ec-a8a3-0242ac120002</id>
+        <name>French Terry Raglan Crewneck Sweatshirt</name>
+        <sizes>
+            <size>XS - 0 items</size>
+            <size>S - 0 items</size>
+            <size>M - 0 items</size>
+            <size>L - 1 items</size>
+            <size>XL - 0 items</size> 
+        </sizes>
+        <prices>
+            <price currency="USD">USD$37.97</price>
+        </prices>
+    </product>
+</products>
