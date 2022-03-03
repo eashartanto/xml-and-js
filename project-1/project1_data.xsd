@@ -1,81 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <xs:element name="OfficeTables">
-        <xs:complexType>
+  <xs:element name="OfficeTables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Table" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
             <xs:sequence>
-                <xs:element maxOccurs="unbounded" ref="Table"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element name="Size">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:short">
+                      <xs:attribute type="xs:string" name="unit" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="DeskFinish"/>
+              <xs:element name="Prices">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Price" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="membership" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="currency" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="Image"/>
+              <xs:element type="xs:string" name="Description"/>
+              <xs:element name="Dimentions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="w">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="unit" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="h">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="unit" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="d">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute type="xs:string" name="unit" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="link"/>
             </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="Table">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="Name"/>
-                <xs:element ref="Size"/>
-                <xs:element ref="DeskFinish"/>
-                <xs:element minOccurs="0" ref="Prices"/>
-                <xs:element ref="Image"/>
-                <xs:element ref="Description"/>
-                <xs:element minOccurs="0" maxOccurs="unbounded" ref="Dimentions"/>
-                <xs:element ref="link"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="Name" type="xs:string"/>
-    <xs:element name="Size">
-        <xs:complexType>
-            <xs:extension base="xs:string">
-                <xs:attribute name="unit" use="required" type="xs:integer"/>
-            </xs:extension>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="DeskFinish" type="xs:string"/>
-
-    <xs:element name="Prices">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element minOccurs="0" ref="Price"/>
-            </xs:sequence>
-            <xs:attribute name="currency" use="required" type="xs:string"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="Image" type="xs:string"/>
-    <xs:element name="Description" type="xs:string"/>
-    <xs:element name="Dimentions">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element minOccurs="0" ref="w"/>
-                <xs:element minOccurs="0" ref="h"/>
-                <xs:element minOccurs="0" ref="d"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-      <xs:element name="Price">
-        <xs:complexType mixed="true">
-            <xs:attribute name="membership" use="required" type="xs:string"/>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="w">
-        <xs:complexType mixed="true">
-            <xs:attribute name="unit" use="required" type="xs:decimal"/>
-        </xs:complexType>
-    </xs:element>
-     <xs:element name="h">
-        <xs:complexType mixed="true">
-            <xs:attribute name="unit" use="required" type="xs:decimal"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="d">
-        <xs:complexType mixed="true">
-            <xs:attribute name="unit" use="required" type="xs:decimal"/>
-        </xs:complexType>
-    </xs:element>
-
-  <xs:element name="link" type="xs:NCName"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
