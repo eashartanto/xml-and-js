@@ -6,6 +6,7 @@
         <xs:element name="product" maxOccurs="unbounded" minOccurs="0">
         <xs:complexType>
             <xs:sequence>
+               
                 <xs:element name="id" type="xs:string" />
                 <xs:complexType>
                     <xs:simpleContent>
@@ -15,7 +16,9 @@
                     </xs:simpleContent>
                 </xs:complexType>
                 </xs:element>
+
                 <xs:element name="name"> </xs:element>
+                
                 <xs:element name="sizes">
                     <xs:complexType>
                         <xs:sequence>
