@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form</title>
+  <link rel='stylesheet' href='q15.css'/>
+</head>
+<body>
+    <h2>HTML Form</h2>
+
+    <form >
+        <label> Text Field: </label>
+        <input type="text" name="textfield" placeholder="enter a value" />
+        <br><br>
+
+        <label for="dropdown">Dropdown:</label>
+        <select name="order" id="order">
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+        </select>
+        <br><br>
+        
+        
+        <label id="checkboxes">
+        <legend>Checkboxes:</legend><br>
+        <input type="checkbox" id="check-bike" name="checkbox" >
+        <label for="size"> I have a bike </label></br>
+        <input type="checkbox" id="check-car" name="checkbox">
+        <label for="size"> I have a car </label></br>
+        <input type="checkbox" id="check-boat" name="checkbox" >
+        <label for="size"> I have a boat </label></br>
+        </label>
+        <br><br>
+        
+        <label id="radioboxes">
+        <legend>Radio Buttons:</legend><br>
+        <label>
+        <input type="radio" id="radio-bike" name="radio" >
+        <label for="price"> I have a bike</label></br>
+        <input type="radio" id="radio-car" name="radio" >
+        <label for="price"> I have a car</label></br>
+        <input type="radio" id="radio-boat" name="radio" >
+        <label for="price"> I have a boat</label></br>
+        </label>
+        </label>
+    </form>
+    
+    </br></br>
+
+    <button type="submit">Submit</button>
+    <button type="cancel" class="cancel">Cancel</button>
+</body>
+</html>

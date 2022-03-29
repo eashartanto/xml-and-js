@@ -1,0 +1,21 @@
+#checkboxes {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 10%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    flex-shrink: 0;
+}
+
+#radioboxes {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 10%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    flex-shrink: 0;
+}
