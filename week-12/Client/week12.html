@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 12</title>
+  </head>
+  <body>
+    <form onsubmit="onSubmit(event)" onreset="onReset()">
+      <input
+        type="text"
+        name="name"
+        id="first_name"
+        placeholder="enter firstname"
+      />
+      <button type="submit">Apply filter</button>
+      <button type="reset">Reset</button>
+    </form>
+    <table id="table-main">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Car Make</th>
+                <th>Car Model</th>
+                <th>Car Model Year</th>
+                <th>Car Color</th>
+                <th>Credit Card Number</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <script type="text/javascript" src="renderer.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+  </body>
+</html>
