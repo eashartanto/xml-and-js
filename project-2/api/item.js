@@ -1,6 +1,6 @@
 const products = require("../data/data.json");
 
-const getAll = ({ id, first_name, last_name, email }) =>
+const getAll = ({ id, first_name, last_name, email } = {}) =>
   new Promise((resolve) => {
     let result = Array.from(products);
 

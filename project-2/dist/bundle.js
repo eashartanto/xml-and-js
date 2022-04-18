@@ -280,7 +280,7 @@ const renderTable = (data, terms) => {
     table.innerHTML = htmlString;
 }
 
-loadData(`../data/data.json`).then((data) => renderTable(data));
+getAll().then(({data}) => renderTable(data));
 const form = document.getElementById(`form`);
 form.onSubmit = (event) => {
     event.preventDefault();
@@ -293,9 +293,9 @@ form.onSubmit = (event) => {
 
     console.log(terms);
   
-    loadData(`../data/data.json`).then((data) => renderTable(data, terms));
+    getAll().then(({data}) => renderTable(data, terms));
 };
 form.onReset = () => {
-    loadData(`../data/data.json`).then((data) => renderTable(data));
+    getAll().then(({data}) => renderTable(data));
 };
 },{"./api/item.js":1}]},{},[3]);
