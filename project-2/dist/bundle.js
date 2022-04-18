@@ -20,7 +20,7 @@ const getAll = ({ id, first_name, last_name, email }) =>
       result = result.filter((item) => item.email === email);
     }
     
-    resolve({ code: 200, data: JSON.stringify(result) });
+    resolve({ code: 200, data: result });
   });
 
 const getById = (id) =>
@@ -28,7 +28,7 @@ const getById = (id) =>
     const product = products.find((product) => product.id === id);
 
     if (product) {
-      resolve({ code: 200, data: JSON.stringify(product) });
+      resolve({ code: 200, data: product });
     } else {
       resolve({
         code: 404,
@@ -280,7 +280,7 @@ const renderTable = (data, terms) => {
     table.innerHTML = htmlString;
 }
 
-getAll().then((data) => renderTable(data));
+loadData(`../data/data.json`).then((data) => renderTable(data));
 
 const onSubmit = (event) => {
     event.preventDefault();
@@ -289,10 +289,10 @@ const onSubmit = (event) => {
         return { name, value: event.target[name].value }
     });
   
-    getAll().then((data) => renderTable(data, terms));
+    loadData(`../data/data.json`).then((data) => renderTable(data, terms));
 };
 
 const onReset = () => {
-    getAll().then((data) => renderTable(data));
+    loadData(`../data/data.json`).then((data) => renderTable(data));
 };
 },{"./api/item.js":1}]},{},[3]);

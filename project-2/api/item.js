@@ -19,7 +19,7 @@ const getAll = ({ id, first_name, last_name, email }) =>
       result = result.filter((item) => item.email === email);
     }
     
-    resolve({ code: 200, data: JSON.stringify(result) });
+    resolve({ code: 200, data: result });
   });
 
 const getById = (id) =>
@@ -27,7 +27,7 @@ const getById = (id) =>
     const product = products.find((product) => product.id === id);
 
     if (product) {
-      resolve({ code: 200, data: JSON.stringify(product) });
+      resolve({ code: 200, data: product });
     } else {
       resolve({
         code: 404,
