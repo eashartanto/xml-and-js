@@ -285,13 +285,16 @@ const form = document.getElementById(`form`);
 form.onSubmit = (event) => {
     event.preventDefault();
 
+    console.log(`here`)
+
     const terms = filterNames.map(name => {
         return { name, value: event.target[name].value }
     });
+
+    console.log(terms);
   
     loadData(`../data/data.json`).then((data) => renderTable(data, terms));
 };
-
 form.onReset = () => {
     loadData(`../data/data.json`).then((data) => renderTable(data));
 };
