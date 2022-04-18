@@ -295,4 +295,4 @@ const onSubmit = (event) => {
 const onReset = () => {
     getAll().then((data) => renderTable(data));
 };
-},{"./api/item":1}]},{},[3]);
+},{"./api/item.js":1}]},{},[3]);
