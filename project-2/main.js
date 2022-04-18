@@ -1,3 +1,5 @@
+const { getAll } = require("./api/item");
+
 const table = document.getElementById("table-body");
 const filterNames = ['first_name', 'last_name', 'email'];
 
@@ -32,7 +34,7 @@ const renderTable = (data, terms) => {
     table.innerHTML = htmlString;
 }
 
-loadData(`../data/data.json`).then((data) => renderTable(data));
+getAll().then((data) => renderTable(data));
 
 const onSubmit = (event) => {
     event.preventDefault();
@@ -41,9 +43,9 @@ const onSubmit = (event) => {
         return { name, value: event.target[name].value }
     });
   
-    loadData(`../data/data.json`).then((data) => renderTable(data, terms));
+    getAll().then((data) => renderTable(data, terms));
 };
 
 const onReset = () => {
-    loadData(`../data/data.json`).then((data) => renderTable(data));
+    getAll().then((data) => renderTable(data));
 };
