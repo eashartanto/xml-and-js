@@ -281,8 +281,8 @@ const renderTable = (data, terms) => {
 }
 
 loadData(`../data/data.json`).then((data) => renderTable(data));
-
-const onSubmit = (event) => {
+const form = document.getElementById(`form`);
+form.onSubmit = (event) => {
     event.preventDefault();
 
     const terms = filterNames.map(name => {
@@ -292,7 +292,7 @@ const onSubmit = (event) => {
     loadData(`../data/data.json`).then((data) => renderTable(data, terms));
 };
 
-const onReset = () => {
+form.onReset = () => {
     loadData(`../data/data.json`).then((data) => renderTable(data));
 };
 },{"./api/item.js":1}]},{},[3]);
